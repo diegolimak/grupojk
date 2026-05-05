@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial — Grupo JK | Corretora Amor à Vida</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --azul-escuro: #1a2e5a;
+    --azul-medio: #2563b0;
+    --azul-claro: #7eb3f0;
+    --azul-bg: #e8f2fc;
+    --bronze: #cd7f32;
+    --prata: #8a8fa8;
+    --ouro: #c9a84c;
+    --verde: #22c55e;
+    --cinza: #64748b;
+    --branco: #ffffff;
+    --fundo: #f5f8ff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--fundo);
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, #0f1f40 60%, #1a3a6b 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -150px; right: -150px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: rgba(37,99,176,0.15);
+  }
+
+  .cover::after {
+    content: '';
+    position: absolute;
+    bottom: -100px; left: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(126,179,240,0.08);
+  }
+
+  .cover-logo {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--azul-claro);
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-heart {
+    font-size: 48px;
+    margin-bottom: 24px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-brand {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-divider {
+    width: 60px; height: 3px;
+    background: var(--azul-claro);
+    margin: 28px auto;
+    border-radius: 2px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-title span { color: var(--azul-claro); }
+
+  .cover-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 48px;
+    position: relative; z-index: 1;
+  }
+
+  .cover-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50px;
+    padding: 10px 24px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    position: relative; z-index: 1;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    z-index: 1;
+  }
+
+  /* ── CONTAINER ── */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 80px 0;
+    border-bottom: 1px solid #e2eaf5;
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  .section-number {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--azul-medio);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .section-text {
+    font-size: 16px;
+    color: #475569;
+    max-width: 700px;
+    margin-bottom: 40px;
+  }
+
+  /* ── BENEFIT CARDS ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(26,46,90,0.07);
+    border: 1px solid #e8f0fb;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(26,46,90,0.12);
+  }
+
+  .card-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+  }
+
+  .card-text {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ── OPERATORS ── */
+  .operators-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .operator-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 2px solid #e8f0fb;
+    text-align: center;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .operator-card.highlight {
+    border-color: var(--azul-medio);
+    box-shadow: 0 4px 24px rgba(37,99,176,0.15);
+  }
+
+  .operator-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--azul-medio);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 16px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .operator-name {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
+
+  .operator-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ── PLAN TABS ── */
+  .plan-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    background: white;
+    padding: 6px;
+    border-radius: 12px;
+    width: fit-content;
+    box-shadow: 0 2px 8px rgba(26,46,90,0.08);
+  }
+
+  .plan-tab {
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    transition: all 0.2s;
+  }
+
+  .plan-tab.bronze.active { background: #f5dfc0; color: var(--bronze); }
+  .plan-tab.prata.active  { background: #dde0ea; color: #5a5f78; }
+  .plan-tab.ouro.active   { background: #f5e8c0; color: #8a6a00; }
+  .plan-tab:hover:not(.active) { background: var(--fundo); }
+
+  /* ── PRICE TABLE ── */
+  .price-section { display: none; }
+  .price-section.active { display: block; }
+
+  .price-table-wrapper {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(26,46,90,0.08);
+    margin-bottom: 24px;
+  }
+
+  .price-table-header {
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+
+  .bronze-header { background: linear-gradient(90deg, #c17a2a, #e09040); }
+  .prata-header  { background: linear-gradient(90deg, #6b7085, #8a8fa8); }
+  .ouro-header   { background: linear-gradient(90deg, #b8892a, #d4a840); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    background: var(--fundo);
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--cinza);
+    border-bottom: 1px solid #e8f0fb;
+  }
+
+  td {
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8faff; }
+
+  td:last-child, th:last-child {
+    text-align: right;
+    font-weight: 600;
+  }
+
+  .price-tables-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* ── COPART TABLE ── */
+  .copart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .copart-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,46,90,0.08);
+  }
+
+  .copart-header {
+    padding: 14px 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .copart-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .copart-item {
+    padding: 14px 12px;
+    text-align: center;
+    border-right: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .copart-item:nth-child(3n) { border-right: none; }
+
+  .copart-item-label {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .copart-item-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--azul-escuro);
+  }
+
+  /* ── NETWORK TABLE ── */
+  .network-table-wrapper {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,46,90,0.08);
+    margin-top: 32px;
+  }
+
+  .network-table-header {
+    background: linear-gradient(90deg, var(--azul-escuro), var(--azul-medio));
+    color: white;
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .check-bronze { color: var(--bronze); font-size: 18px; }
+  .check-prata  { color: var(--prata);  font-size: 18px; }
+  .check-ouro   { color: var(--ouro);   font-size: 18px; }
+  .dash { color: #cbd5e1; font-size: 18px; }
+
+  td.center, th.center { text-align: center; }
+
+  /* ── INVESTMENT ── */
+  .invest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .invest-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 2px solid #e8f0fb;
+    text-align: center;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .invest-card:hover {
+    border-color: var(--azul-claro);
+    box-shadow: 0 4px 20px rgba(37,99,176,0.1);
+  }
+
+  .invest-icon { font-size: 36px; margin-bottom: 16px; display: block; }
+  .invest-title { font-size: 15px; font-weight: 700; color: var(--azul-escuro); margin-bottom: 8px; }
+  .invest-desc { font-size: 13px; color: #64748b; }
+
+  /* ── AMV SUPPORT ── */
+  .support-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .support-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(26,46,90,0.06);
+  }
+
+  .support-dot {
+    width: 36px; height: 36px;
+    background: var(--azul-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .support-text { font-size: 14px; color: #334155; font-weight: 500; line-height: 1.5; }
+
+  /* ── CARÊNCIA ── */
+  .carencia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .carencia-block {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,46,90,0.07);
+  }
+
+  .carencia-header {
+    background: var(--azul-escuro);
+    color: white;
+    padding: 14px 20px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .carencia-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 12px;
+  }
+
+  .carencia-item:last-child { border-bottom: none; }
+
+  .carencia-proc {
+    font-size: 14px;
+    color: #334155;
+    flex: 1;
+  }
+
+  .carencia-prazo {
+    background: var(--azul-bg);
+    color: var(--azul-medio);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 4px 12px;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .carencia-prazo.fast {
+    background: #dcfce7;
+    color: #16a34a;
+  }
+
+  /* ── STEPS ── */
+  .steps {
+    display: flex;
+    gap: 0;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    height: 2px;
+    background: var(--azul-bg);
+    z-index: 0;
+  }
+
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--azul-medio);
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 16px rgba(37,99,176,0.25);
+  }
+
+  .step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    line-height: 1.4;
+    max-width: 120px;
+  }
+
+  /* ── CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, #0f1f40 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .cta-title span { color: var(--azul-claro); }
+
+  .cta-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 40px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: 0 8px 32px rgba(37,211,102,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(37,211,102,0.45);
+  }
+
+  .cta-proof {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .proof-item {
+    text-align: center;
+  }
+
+  .proof-num {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--azul-claro);
+    display: block;
+  }
+
+  .proof-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: #0d1829;
+    color: rgba(255,255,255,0.45);
+    text-align: center;
+    padding: 32px;
+    font-size: 13px;
+  }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box {
+    background: var(--azul-bg);
+    border-left: 4px solid var(--azul-medio);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+
+  .highlight-box p { font-size: 14px; color: #334155; }
+  .highlight-box strong { color: var(--azul-escuro); }
+
+  /* ── ADESÃO NOTE ── */
+  .adesao-note {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #92400e;
+    margin-bottom: 24px;
+  }
+
+  .adesao-note strong { color: #78350f; }
+
+  /* ── TAG ── */
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-bronze { background: #f5dfc0; color: var(--bronze); }
+  .tag-prata  { background: #dde0ea; color: #5a5f78; }
+  .tag-ouro   { background: #f5e8c0; color: #8a6a00; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cards-grid, .operators-grid, .invest-grid { grid-template-columns: 1fr; }
+    .carencia-grid, .copart-grid, .support-list, .price-tables-row { grid-template-columns: 1fr; }
+    .cover-title { font-size: 32px; }
+    .steps { flex-direction: column; gap: 20px; }
+    .steps::before { display: none; }
+    .cta-proof { flex-direction: column; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════ COVER ══════════════════════════════ -->
+<div class="cover">
+  <div class="cover-logo">Proposta Comercial</div>
+  <div class="cover-heart">💙</div>
+  <div class="cover-brand">Corretora Amor à Vida</div>
+  <div class="cover-divider"></div>
+  <h1 class="cover-title">Plano de Saúde<br>para o <span>Grupo JK</span></h1>
+  <p class="cover-subtitle">Benefício de saúde completo para sua equipe — com gestão 360° da corretora</p>
+  <div class="cover-badge">
+    <span>⭐</span>
+    <span>+760 avaliações no Google · SUSEP nº 202005903</span>
+  </div>
+  <div class="cover-footer">
+    <span>corretoraamoravida.com.br</span>
+    <span>·</span>
+    <span>(61) 99688-5312</span>
+    <span>·</span>
+    <span>Águas Claras, Brasília-DF</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CENÁRIO ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">01 — Contexto</div>
+    <h2 class="section-title">Cenário Atual e Oportunidade</h2>
+    <p class="section-text">
+      Atualmente o Grupo JK não oferece plano de saúde como benefício. Considerando o perfil jovem e celetista da equipe, a implementação desse benefício representa uma oportunidade estratégica de retenção de talentos — com custo muito menor do que o esperado.
+    </p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <span class="card-icon">🏆</span>
+        <div class="card-title">Retenção de Talentos</div>
+        <p class="card-text">Plano de saúde é o 2º benefício mais valorizado pelos colaboradores. Reduz rotatividade e aumenta o engajamento.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">💰</span>
+        <div class="card-title">Até 50% mais barato</div>
+        <p class="card-text">Via CNPJ, o custo do plano pode ser até 50% menor do que na contratação individual — sem análise de crédito.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <div class="card-title">Implementação rápida</div>
+        <p class="card-text">CNPJs novos podem contratar desde o primeiro dia de abertura. Mínimo de 2 vidas para ativar o contrato.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ OPERADORAS ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">02 — Comparativo</div>
+    <h2 class="section-title">Operadoras Analisadas</h2>
+    <p class="section-text">Foram avaliadas três operadoras. Nossa recomendação é a <strong>Amil</strong>, que oferece o melhor custo-benefício para o perfil do Grupo JK.</p>
+
+    <div class="operators-grid">
+      <div class="operator-card">
+        <div class="operator-name">Bradesco</div>
+        <p class="operator-desc">Rede credenciada completa e portfólio robusto, porém com custos mais elevados e menor flexibilidade de produtos.</p>
+      </div>
+      <div class="operator-card highlight">
+        <div class="operator-badge">✦ Recomendado</div>
+        <div class="operator-name" style="color: var(--azul-medio);">Amil</div>
+        <p class="operator-desc">Melhor custo-benefício do mercado. Permite mesclar produtos, excelente aceitação de PJs e ampla rede em Brasília.</p>
+      </div>
+      <div class="operator-card">
+        <div class="operator-name">Porto Seguro</div>
+        <p class="operator-desc">Custo baixo com rede estratégica. Boa opção de entrada, mas com cobertura mais restrita.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TABELA DE PREÇOS AMIL ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">03 — Planos e Valores</div>
+    <h2 class="section-title">Tabela de Preços — Amil</h2>
+    <p class="section-text">Valores mensais por faixa etária, modalidade empresarial (por CNPJ). Escolha o plano para visualizar os valores:</p>
+
+    <div class="plan-tabs" id="planTabs">
+      <button class="plan-tab bronze active" onclick="showPlan('bronze')">🥉 Bronze</button>
+      <button class="plan-tab prata" onclick="showPlan('prata')">🥈 Prata</button>
+      <button class="plan-tab ouro" onclick="showPlan('ouro')">🥇 Ouro</button>
+    </div>
+
+    <!-- BRONZE -->
+    <div class="price-section active" id="plan-bronze">
+      <div class="price-tables-row">
+        <div class="price-table-wrapper">
+          <div class="price-table-header bronze-header">🥉 Amil Bronze — Copart Parcial</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 288,23</td></tr>
+              <tr><td>19 a 23</td><td>R$ 391,42</td></tr>
+              <tr><td>24 a 28</td><td>R$ 459,49</td></tr>
+              <tr><td>29 a 33</td><td>R$ 459,49</td></tr>
+              <tr><td>34 a 38</td><td>R$ 459,49</td></tr>
+              <tr><td>39 a 43</td><td>R$ 513,25</td></tr>
+              <tr><td>44 a 48</td><td>R$ 708,80</td></tr>
+              <tr><td>49 a 53</td><td>R$ 846,31</td></tr>
+              <tr><td>54 a 58</td><td>R$ 1.216,99</td></tr>
+              <tr><td>59+</td><td>R$ 1.725,69</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price-table-wrapper">
+          <div class="price-table-header bronze-header">🥉 Amil Bronze — Copart Total</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 216,17</td></tr>
+              <tr><td>19 a 23</td><td>R$ 293,56</td></tr>
+              <tr><td>24 a 28</td><td>R$ 344,61</td></tr>
+              <tr><td>29 a 33</td><td>R$ 344,61</td></tr>
+              <tr><td>34 a 38</td><td>R$ 344,61</td></tr>
+              <tr><td>39 a 43</td><td>R$ 384,93</td></tr>
+              <tr><td>44 a 48</td><td>R$ 531,59</td></tr>
+              <tr><td>49 a 53</td><td>R$ 634,72</td></tr>
+              <tr><td>54 a 58</td><td>R$ 912,73</td></tr>
+              <tr><td>59+</td><td>R$ 1.294,25</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p>🏥 <strong>Acomodação:</strong> Enfermaria (em Brasília, muitos hospitais não dispõem dessa modalidade, resultando na prática em apartamentos pelo mesmo valor). <strong>Fidelidade:</strong> 12 meses com multa de 3x o valor médio das últimas mensalidades.</p>
+      </div>
+    </div>
+
+    <!-- PRATA -->
+    <div class="price-section" id="plan-prata">
+      <div class="price-tables-row">
+        <div class="price-table-wrapper">
+          <div class="price-table-header prata-header">🥈 Amil Prata — Copart Parcial</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 347,65</td></tr>
+              <tr><td>19 a 23</td><td>R$ 406,75</td></tr>
+              <tr><td>24 a 28</td><td>R$ 496,24</td></tr>
+              <tr><td>29 a 33</td><td>R$ 595,49</td></tr>
+              <tr><td>34 a 38</td><td>R$ 625,26</td></tr>
+              <tr><td>39 a 43</td><td>R$ 687,79</td></tr>
+              <tr><td>44 a 48</td><td>R$ 859,74</td></tr>
+              <tr><td>49 a 53</td><td>R$ 945,71</td></tr>
+              <tr><td>54 a 58</td><td>R$ 1.182,14</td></tr>
+              <tr><td>59+</td><td>R$ 2.068,75</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price-table-wrapper">
+          <div class="price-table-header prata-header">🥈 Amil Prata — Copart Total</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 260,74</td></tr>
+              <tr><td>19 a 23</td><td>R$ 305,07</td></tr>
+              <tr><td>24 a 28</td><td>R$ 372,19</td></tr>
+              <tr><td>29 a 33</td><td>R$ 446,63</td></tr>
+              <tr><td>34 a 38</td><td>R$ 468,96</td></tr>
+              <tr><td>39 a 43</td><td>R$ 515,86</td></tr>
+              <tr><td>44 a 48</td><td>R$ 644,83</td></tr>
+              <tr><td>49 a 53</td><td>R$ 709,31</td></tr>
+              <tr><td>54 a 58</td><td>R$ 886,64</td></tr>
+              <tr><td>59+</td><td>R$ 1.551,62</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p>🏥 <strong>Acomodação:</strong> Enfermaria (em Brasília, muitos hospitais não dispõem dessa modalidade, resultando na prática em apartamentos pelo mesmo valor). <strong>Fidelidade:</strong> 12 meses com multa de 3x o valor médio das últimas mensalidades.</p>
+      </div>
+    </div>
+
+    <!-- OURO -->
+    <div class="price-section" id="plan-ouro">
+      <div class="price-tables-row">
+        <div class="price-table-wrapper">
+          <div class="price-table-header ouro-header">🥇 Amil Ouro — Copart Parcial</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 387,85</td></tr>
+              <tr><td>19 a 23</td><td>R$ 453,78</td></tr>
+              <tr><td>24 a 28</td><td>R$ 553,61</td></tr>
+              <tr><td>29 a 33</td><td>R$ 664,33</td></tr>
+              <tr><td>34 a 38</td><td>R$ 697,55</td></tr>
+              <tr><td>39 a 43</td><td>R$ 767,31</td></tr>
+              <tr><td>44 a 48</td><td>R$ 959,14</td></tr>
+              <tr><td>49 a 53</td><td>R$ 1.055,05</td></tr>
+              <tr><td>54 a 58</td><td>R$ 1.318,81</td></tr>
+              <tr><td>59+</td><td>R$ 2.307,92</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="price-table-wrapper">
+          <div class="price-table-header ouro-header">🥇 Amil Ouro — Copart Total</div>
+          <table>
+            <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+            <tbody>
+              <tr><td>0 a 18</td><td>R$ 290,89</td></tr>
+              <tr><td>19 a 23</td><td>R$ 340,34</td></tr>
+              <tr><td>24 a 28</td><td>R$ 415,21</td></tr>
+              <tr><td>29 a 33</td><td>R$ 498,25</td></tr>
+              <tr><td>34 a 38</td><td>R$ 523,16</td></tr>
+              <tr><td>39 a 43</td><td>R$ 575,48</td></tr>
+              <tr><td>44 a 48</td><td>R$ 719,35</td></tr>
+              <tr><td>49 a 53</td><td>R$ 791,29</td></tr>
+              <tr><td>54 a 58</td><td>R$ 989,11</td></tr>
+              <tr><td>59+</td><td>R$ 1.730,94</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <p>🏥 <strong>Acomodação:</strong> Enfermaria (em Brasília, muitos hospitais não dispõem dessa modalidade, resultando na prática em apartamentos pelo mesmo valor). <strong>Fidelidade:</strong> 12 meses com multa de 3x o valor médio das últimas mensalidades.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ COPARTICIPAÇÃO ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">04 — Modelo de Uso</div>
+    <h2 class="section-title">Tabela de Coparticipação</h2>
+    <p class="section-text">Os planos possuem coparticipação com limite máximo por procedimento — sem surpresas na fatura. Previsibilidade total para o colaborador.</p>
+
+    <div class="copart-grid">
+      <div class="copart-card">
+        <div class="copart-header bronze-header">🥉 Amil Bronze — Coparticipação</div>
+        <div class="copart-items">
+          <div class="copart-item">
+            <div class="copart-item-label">Consultas e Clínicas</div>
+            <div class="copart-item-value">R$ 30</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Hosp. PS</div>
+            <div class="copart-item-value">R$ 80</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Exames Básicos</div>
+            <div class="copart-item-value">R$ 20</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Exames Especiais</div>
+            <div class="copart-item-value">R$ 100</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Proc. Básicos</div>
+            <div class="copart-item-value">R$ 35</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Proc. Especiais</div>
+            <div class="copart-item-value">R$ 140</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Fisioterapia</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Fonoaudio.</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Nutrição</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Psicoterapia</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">T. Ocupacional</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Internação</div>
+            <div class="copart-item-value">R$ 180</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copart-card">
+        <div class="copart-header" style="background: linear-gradient(90deg, #6b7085, #8a8fa8);">🥈🥇 Amil Prata/Ouro — Coparticipação</div>
+        <div class="copart-items">
+          <div class="copart-item">
+            <div class="copart-item-label">Consultas e Clínicas</div>
+            <div class="copart-item-value">R$ 30</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Hosp. PS</div>
+            <div class="copart-item-value">R$ 90</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Exames Básicos</div>
+            <div class="copart-item-value">R$ 25</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Exames Especiais</div>
+            <div class="copart-item-value">R$ 110</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Proc. Básicos</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Proc. Especiais</div>
+            <div class="copart-item-value">R$ 150</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Fisioterapia</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Fonoaudio.</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Nutrição</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Psicoterapia</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">T. Ocupacional</div>
+            <div class="copart-item-value">R$ 60</div>
+          </div>
+          <div class="copart-item">
+            <div class="copart-item-label">Internação</div>
+            <div class="copart-item-value">R$ 220</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ REDE CREDENCIADA ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">05 — Cobertura</div>
+    <h2 class="section-title">Rede Credenciada em Brasília</h2>
+    <p class="section-text">Hospitais e laboratórios disponíveis por plano. A Amil tem presença estratégica nas principais regiões do DF.</p>
+
+    <div class="network-table-wrapper">
+      <div class="network-table-header">🏥 Hospitais e Laboratórios — Brasília e DF</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Região</th>
+            <th>Hospital / Laboratório</th>
+            <th class="center"><span class="tag tag-bronze">Bronze</span></th>
+            <th class="center"><span class="tag tag-prata">Prata</span></th>
+            <th class="center"><span class="tag tag-ouro">Ouro</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Águas Claras</td><td>Hospital Águas Claras</td><td class="center">✔</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Asa Norte</td><td>Santa Helena</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
+          <tr><td>Asa Norte</td><td>ManteVida</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Asa Sul</td><td>Hospital do Coração</td><td class="center">—</td><td class="center">✔</td><td class="center">—</td></tr>
+          <tr><td>Asa Sul</td><td>Alvorada</td><td class="center">✔</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Asa Sul</td><td>Santa Lucia Sul</td><td class="center">—</td><td class="center">—</td><td class="center">✔</td></tr>
+          <tr><td>Asa Sul</td><td>Pacini</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Asa Sul</td><td>Sírio Libanes</td><td class="center">—</td><td class="center">—</td><td class="center">—</td></tr>
+          <tr><td>Ceilândia</td><td>Anchieta Ceilândia</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Gama</td><td>Santa Lucia Gama</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Lago Sul</td><td>Hospital Brasília</td><td class="center">✔</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Lago Sul</td><td>DAHER</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Sudoeste</td><td>Maternidade Brasília</td><td class="center">✔</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Taguatinga Sul</td><td>Santa Lucia Pistão Sul</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Taguatinga Sul</td><td>Hospital Mantevida</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Taguatinga Sul</td><td>Santa Marta</td><td class="center">—</td><td class="center">—</td><td class="center">✔</td></tr>
+          <tr><td>Todas as Unidades</td><td>Laboratório Sabin</td><td class="center">—</td><td class="center">✔</td><td class="center">✔</td></tr>
+          <tr><td>Todas as Unidades</td><td>Laboratório Exame</td><td class="center">✔</td><td class="center">✔</td><td class="center">✔</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CONTRATAÇÃO ADESÃO ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">06 — Opção para 1 Pessoa</div>
+    <h2 class="section-title">Contratação por Adesão</h2>
+
+    <div class="adesao-note">
+      ⚠️ <strong>Atenção:</strong> O formato adesão está disponível para contratação de uma única pessoa. É financeiramente menos vantajoso e possui regras diferentes dos planos por CNPJ — utilizar apenas quando necessário.
+    </div>
+
+    <div class="price-tables-row">
+      <div class="price-table-wrapper">
+        <div class="price-table-header bronze-header">🥉 Adesão Bronze — Copart Parcial</div>
+        <table>
+          <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+          <tbody>
+            <tr><td>0 a 18</td><td>R$ 427,87</td></tr>
+            <tr><td>19 a 23</td><td>R$ 581,05</td></tr>
+            <tr><td>24 a 28</td><td>R$ 682,09</td></tr>
+            <tr><td>29 a 33</td><td>R$ 682,09</td></tr>
+            <tr><td>34 a 38</td><td>R$ 682,09</td></tr>
+            <tr><td>39 a 43</td><td>R$ 761,89</td></tr>
+            <tr><td>44 a 48</td><td>R$ 1.052,17</td></tr>
+            <tr><td>49 a 53</td><td>R$ 1.256,29</td></tr>
+            <tr><td>54 a 58</td><td>R$ 1.806,55</td></tr>
+            <tr><td>59+</td><td>R$ 2.561,69</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="price-table-wrapper">
+        <div class="price-table-header prata-header">🥈 Adesão Prata — Copart Parcial</div>
+        <table>
+          <thead><tr><th>Faixa Etária</th><th>Valor/mês</th></tr></thead>
+          <tbody>
+            <tr><td>0 a 18</td><td>R$ 597,62</td></tr>
+            <tr><td>19 a 23</td><td>R$ 699,22</td></tr>
+            <tr><td>24 a 28</td><td>R$ 853,04</td></tr>
+            <tr><td>29 a 33</td><td>R$ 1.023,65</td></tr>
+            <tr><td>34 a 38</td><td>R$ 1.074,84</td></tr>
+            <tr><td>39 a 43</td><td>R$ 1.182,31</td></tr>
+            <tr><td>44 a 48</td><td>R$ 1.477,91</td></tr>
+            <tr><td>49 a 53</td><td>R$ 1.625,71</td></tr>
+            <tr><td>54 a 58</td><td>R$ 2.032,14</td></tr>
+            <tr><td>59+</td><td>R$ 3.556,26</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ POLÍTICA DE INVESTIMENTO ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">07 — Modelo Financeiro</div>
+    <h2 class="section-title">Políticas de Investimento</h2>
+    <p class="section-text">A política de custeio pode ser definida internamente e adaptada conforme a estratégia da empresa. Cada modelo tem um impacto diferente na adesão e na percepção de valor pelos colaboradores.</p>
+
+    <div class="invest-grid">
+      <div class="invest-card">
+        <span class="invest-icon">👤</span>
+        <div class="invest-title">100% Colaborador</div>
+        <p class="invest-desc">O colaborador arca com todo o custo. Mesmo assim, se beneficia de preços até 50% menores que no mercado individual.</p>
+      </div>
+      <div class="invest-card">
+        <span class="invest-icon">🏢</span>
+        <div class="invest-title">100% Empresa</div>
+        <p class="invest-desc">A empresa cobre o custo integralmente. Maximiza a adesão, o engajamento e a percepção de benefício pela equipe.</p>
+      </div>
+      <div class="invest-card">
+        <span class="invest-icon">⚖️</span>
+        <div class="invest-title">Percentual por Cargo</div>
+        <p class="invest-desc">A empresa subsidia um percentual variável conforme o nível hierárquico — flexível e estratégico para retenção de talentos-chave.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ SUPORTE AMV ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">08 — Nosso Diferencial</div>
+    <h2 class="section-title">Suporte Amor à Vida — Gestão 360°</h2>
+    <p class="section-text">Ligar para o 0800 da operadora? Nunca mais. A nossa equipe cuida de tudo pelo Grupo JK — do agendamento ao reembolso.</p>
+
+    <div class="support-list">
+      <div class="support-item">
+        <div class="support-dot">📋</div>
+        <div class="support-text">Revisão anual de contrato e estudo de mercado para garantir sempre o melhor custo-benefício</div>
+      </div>
+      <div class="support-item">
+        <div class="support-dot">🏗️</div>
+        <div class="support-text">Estruturação completa da política de benefício — do zero até a comunicação com os colaboradores</div>
+      </div>
+      <div class="support-item">
+        <div class="support-dot">🔄</div>
+        <div class="support-text">Gestão integral de movimentações: inclusões, exclusões, upgrades e downgrades</div>
+      </div>
+      <div class="support-item">
+        <div class="support-dot">📊</div>
+        <div class="support-text">Conferência de faturas e apoio financeiro para evitar cobranças indevidas</div>
+      </div>
+      <div class="support-item">
+        <div class="support-dot">🤝</div>
+        <div class="support-text">Atendimento direto aos colaboradores: agendamentos, autorizações e reembolsos</div>
+      </div>
+      <div class="support-item">
+        <div class="support-dot">📜</div>
+        <div class="support-text">Termo de garantia registrado em cartório — a corretora assume responsabilidade formal pelos erros</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CARÊNCIA ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">09 — Regras Importantes</div>
+    <h2 class="section-title">Prazos de Carência</h2>
+    <p class="section-text">Os prazos variam conforme o tipo de procedimento e o histórico do beneficiário. Colaboradores com plano anterior têm aproveitamento de carências.</p>
+
+    <div class="carencia-grid">
+      <div class="carencia-block">
+        <div class="carencia-header">🆕 Sem plano anterior</div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Urgência e emergência</span>
+          <span class="carencia-prazo fast">24 horas</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Consultas e exames simples</span>
+          <span class="carencia-prazo fast">24 horas</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Internações, cirurgias eletivas, exames de alta complexidade e terapias</span>
+          <span class="carencia-prazo">180 dias</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Parto a termo</span>
+          <span class="carencia-prazo">300 dias</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Doenças ou lesões pré-existentes</span>
+          <span class="carencia-prazo">24 meses</span>
+        </div>
+      </div>
+
+      <div class="carencia-block">
+        <div class="carencia-header">✅ Com plano anterior</div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Maioria dos procedimentos</span>
+          <span class="carencia-prazo fast">Aproveitado</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Internações, cirurgias eletivas, exames de alta complexidade e terapias</span>
+          <span class="carencia-prazo">180 dias</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Parto a termo</span>
+          <span class="carencia-prazo">300 dias</span>
+        </div>
+        <div class="carencia-item">
+          <span class="carencia-proc">Doenças ou lesões pré-existentes</span>
+          <span class="carencia-prazo">24 meses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ PRÓXIMOS PASSOS ══════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="section-number">10 — Agora é simples</div>
+    <h2 class="section-title">Próximos Passos</h2>
+    <p class="section-text">Após a decisão interna, a Amor à Vida cuida de todo o processo. São apenas 4 etapas até o benefício ativo para a equipe.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-label">Pesquisa de interesse com os colaboradores</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-label">Coleta das documentações necessárias</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-label">Preenchimento da declaração de saúde</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-label">Análise e aprovação pela operadora</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ CTA ══════════════════════════════ -->
+<div class="cta-section">
+  <div class="container">
+    <h2 class="cta-title">Pronto para proteger<br>a equipe do <span>Grupo JK</span>?</h2>
+    <p class="cta-sub">A gente cuida de tudo. Fala com a gente e a gente mostra como ativar o benefício rapidinho.</p>
+
+    <a href="https://api.whatsapp.com/send?phone=5561996885312&text=Olá!%20Sou%20do%20Grupo%20JK%20e%20quero%20avançar%20com%20a%20proposta%20de%20plano%20de%20saúde." class="cta-btn" target="_blank">
+      <span>💬</span>
+      <span>Falar no WhatsApp agora</span>
+    </a>
+
+    <div class="cta-proof">
+      <div class="proof-item">
+        <span class="proof-num">+760</span>
+        <span class="proof-label">avaliações no Google</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">100%</span>
+        <span class="proof-label">gestão pela corretora</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">50%</span>
+        <span class="proof-label">mais barato que individual</span>
+      </div>
+      <div class="proof-item">
+        <span class="proof-num">🔒</span>
+        <span class="proof-label">Garantia em cartório</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<div class="footer">
+  Corretora Amor à Vida · SUSEP nº 202005903 · ola@corretoraamoravida.com.br · (61) 99688-5312<br>
+  Edifício Connect Towers — Águas Claras, Brasília-DF · corretoraamoravida.com.br
+</div>
+
+<script>
+  function showPlan(plan) {
+    // esconde todas as seções
+    document.querySelectorAll('.price-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.plan-tab').forEach(t => t.classList.remove('active'));
+
+    // mostra a selecionada
+    document.getElementById('plan-' + plan).classList.add('active');
+
+    // ativa o botão correto
+    document.querySelectorAll('.plan-tab').forEach(t => {
+      if (t.classList.contains(plan)) t.classList.add('active');
+    });
+  }
+</script>
+
+</body>
+</html>
