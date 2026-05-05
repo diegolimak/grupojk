@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Proposta Comercial — Grupo JK | Corretora Amor à Vida</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -63,26 +63,17 @@
     background: rgba(126,179,240,0.08);
   }
 
-  .cover-logo {
-    font-size: 13px;
-    letter-spacing: 3px;
+  .cover-pre-label {
+    font-size: 12px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--azul-claro);
-    margin-bottom: 16px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 20px;
     position: relative; z-index: 1;
   }
 
-  .cover-heart {
-    font-size: 48px;
-    margin-bottom: 24px;
-    position: relative; z-index: 1;
-  }
-
-  .cover-brand {
-    font-size: 22px;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 8px;
+  .cover-logo-img {
+    margin-bottom: 32px;
     position: relative; z-index: 1;
   }
 
@@ -278,11 +269,14 @@
     padding: 6px;
     border-radius: 12px;
     width: fit-content;
+    max-width: 100%;
     box-shadow: 0 2px 8px rgba(26,46,90,0.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .plan-tab {
-    padding: 10px 28px;
+    padding: 12px 28px;
     border-radius: 8px;
     font-weight: 600;
     font-size: 14px;
@@ -291,6 +285,11 @@
     background: transparent;
     color: #64748b;
     transition: all 0.2s;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    min-height: 44px;
   }
 
   .plan-tab.bronze.active { background: #f5dfc0; color: var(--bronze); }
@@ -623,26 +622,6 @@
     margin-right: auto;
   }
 
-  .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #25d366;
-    color: white;
-    text-decoration: none;
-    padding: 16px 36px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 17px;
-    box-shadow: 0 8px 32px rgba(37,211,102,0.35);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(37,211,102,0.45);
-  }
-
   .cta-proof {
     margin-top: 40px;
     display: flex;
@@ -669,10 +648,11 @@
   /* ── FOOTER ── */
   .footer {
     background: #0d1829;
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.4);
     text-align: center;
-    padding: 32px;
+    padding: 48px 32px 36px;
     font-size: 13px;
+    line-height: 1.8;
   }
 
   /* ── HIGHLIGHT BOX ── */
@@ -719,10 +699,22 @@
   @media (max-width: 768px) {
     .cards-grid, .operators-grid, .invest-grid { grid-template-columns: 1fr; }
     .carencia-grid, .copart-grid, .support-list, .price-tables-row { grid-template-columns: 1fr; }
-    .cover-title { font-size: 32px; }
+    .cover-title { font-size: 28px; }
+    .cover-subtitle { font-size: 15px; margin-bottom: 32px; }
+    .section-title { font-size: 22px; }
+    .section { padding: 48px 0; }
+    .container { padding: 0 18px; }
     .steps { flex-direction: column; gap: 20px; }
     .steps::before { display: none; }
     .cta-proof { flex-direction: column; gap: 20px; }
+    .cta-title { font-size: 26px; }
+    .plan-tabs { width: 100%; }
+    .copart-items { grid-template-columns: 1fr 1fr; }
+    table { font-size: 13px; }
+    th, td { padding: 10px 12px; }
+    .network-table-wrapper { overflow-x: auto; }
+    .network-table-wrapper table { min-width: 500px; }
+    .cover-footer { font-size: 11px; gap: 12px; }
   }
 </style>
 </head>
@@ -730,22 +722,16 @@
 
 <!-- ══════════════════════════════ COVER ══════════════════════════════ -->
 <div class="cover">
-  <div class="cover-logo">Proposta Comercial</div>
-  <div class="cover-heart">💙</div>
-  <div class="cover-brand">Corretora Amor à Vida</div>
+  <div class="cover-pre-label">Proposta Comercial</div>
+  <div class="cover-logo-img">
+    <img src="AMV_LOGO_BRANCA.png" alt="Corretora Amor à Vida" style="height:72px; max-width:400px;">
+  </div>
   <div class="cover-divider"></div>
   <h1 class="cover-title">Plano de Saúde<br>para o <span>Grupo JK</span></h1>
   <p class="cover-subtitle">Benefício de saúde completo para sua equipe — com gestão 360° da corretora</p>
-  <div class="cover-badge">
-    <span>⭐</span>
-    <span>+760 avaliações no Google · SUSEP nº 202005903</span>
-  </div>
+
   <div class="cover-footer">
     <span>corretoraamoravida.com.br</span>
-    <span>·</span>
-    <span>(61) 99688-5312</span>
-    <span>·</span>
-    <span>Águas Claras, Brasília-DF</span>
   </div>
 </div>
 
@@ -1316,13 +1302,9 @@
 <!-- ══════════════════════════════ CTA ══════════════════════════════ -->
 <div class="cta-section">
   <div class="container">
+    <img src="AMV_FLAT.png" alt="" style="height:56px; margin-bottom:20px; opacity:0.9;">
     <h2 class="cta-title">Pronto para proteger<br>a equipe do <span>Grupo JK</span>?</h2>
-    <p class="cta-sub">A gente cuida de tudo. Fala com a gente e a gente mostra como ativar o benefício rapidinho.</p>
-
-    <a href="https://api.whatsapp.com/send?phone=5561996885312&text=Olá!%20Sou%20do%20Grupo%20JK%20e%20quero%20avançar%20com%20a%20proposta%20de%20plano%20de%20saúde." class="cta-btn" target="_blank">
-      <span>💬</span>
-      <span>Falar no WhatsApp agora</span>
-    </a>
+    <p class="cta-sub">A gente cuida de tudo — da cotação ao contrato. Entre em contato e vamos dar o próximo passo juntos.</p>
 
     <div class="cta-proof">
       <div class="proof-item">
@@ -1347,24 +1329,30 @@
 
 <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
 <div class="footer">
-  Corretora Amor à Vida · SUSEP nº 202005903 · ola@corretoraamoravida.com.br · (61) 99688-5312<br>
-  Edifício Connect Towers — Águas Claras, Brasília-DF · corretoraamoravida.com.br
+  <img src="AMV_LOGO_COLORIDA.png" alt="Corretora Amor à Vida" style="height:36px; margin-bottom:14px; display:block; margin-left:auto; margin-right:auto; opacity:0.6;"><br>
+  ola@corretoraamoravida.com.br &nbsp;·&nbsp; corretoraamoravida.com.br<br>
+  Edifício Connect Towers — Águas Claras, Brasília-DF
 </div>
 
 <script>
   function showPlan(plan) {
-    // esconde todas as seções
-    document.querySelectorAll('.price-section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.plan-tab').forEach(t => t.classList.remove('active'));
-
-    // mostra a selecionada
-    document.getElementById('plan-' + plan).classList.add('active');
-
-    // ativa o botão correto
-    document.querySelectorAll('.plan-tab').forEach(t => {
+    document.querySelectorAll('.price-section').forEach(function(s) {
+      s.classList.remove('active');
+    });
+    document.querySelectorAll('.plan-tab').forEach(function(t) {
+      t.classList.remove('active');
+    });
+    var section = document.getElementById('plan-' + plan);
+    if (section) section.classList.add('active');
+    document.querySelectorAll('.plan-tab').forEach(function(t) {
       if (t.classList.contains(plan)) t.classList.add('active');
     });
   }
+
+  // Garantir que as abas funcionem no carregamento
+  document.addEventListener('DOMContentLoaded', function() {
+    showPlan('bronze');
+  });
 </script>
 
 </body>
